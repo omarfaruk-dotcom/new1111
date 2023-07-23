@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form onsubmit="return checkLogin()" id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <input type="submit" value="Login">
+  </form>
+
+  <script>
+    function checkLogin() {
+      // Replace these hardcoded values with actual username and password validation
+      const validUsername = "siam";
+      const validPassword = "1234";
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (username === validUsername && password === validPassword) {
+        // Redirect to the specified link if the username and password are correct
+        window.location.href = "https://www.youtube.com/results?search_query=how+to+check+user+name+and+password+in+html";
+        return false; // Prevent form submission to avoid the default form action
+      } else {
+        alert("Invalid username or password. Please try again.");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
